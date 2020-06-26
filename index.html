@@ -37,7 +37,7 @@
             <textarea class="description"></textarea>
           </td>
           <td>
-            <button id="saveBtn">Save</button>
+            <button class="saveBtn">Save</button>
           </td>
         </tr>
         <tr scope="row">
@@ -46,7 +46,7 @@
             <textarea class="description"></textarea>
           </td>
           <td>
-            <button id="saveBtn">Save</button>
+            <button class="saveBtn">Save</button>
           </td>
         </tr>
         <tr scope="row">
@@ -55,7 +55,7 @@
             <textarea class="description"></textarea>
           </td>
           <td>
-            <button id="saveBtn">Save</button>
+            <button class="saveBtn">Save</button>
           </td>
         </tr>
         <tr scope="row">
@@ -64,7 +64,7 @@
             <textarea class="description"></textarea>
           </td>
           <td>
-            <button id="saveBtn">Save</button>
+            <button class="saveBtn">Save</button>
           </td>
         </tr>
         <tr scope="row">
@@ -73,7 +73,7 @@
             <textarea class="description"></textarea>
           </td>
           <td>
-            <button id="saveBtn">Save</button>
+            <button class="saveBtn">Save</button>
           </td>
         </tr>
         <tr scope="row">
@@ -82,7 +82,7 @@
             <textarea class="description"></textarea>
           </td>
           <td>
-            <button id="saveBtn">Save</button>
+            <button class="saveBtn">Save</button>
           </td>
         </tr>
         <tr scope="row">
@@ -91,7 +91,7 @@
             <textarea class="description"></textarea>
           </td>
           <td>
-            <button id="saveBtn">Save</button>
+            <button class="saveBtn">Save</button>
           </td>
         </tr>
         <tr scope="row">
@@ -100,7 +100,7 @@
             <textarea class="description"></textarea>
           </td>
           <td>
-            <button id="saveBtn">Save</button>
+            <button class="saveBtn">Save</button>
           </td>
         </tr>
         <tr scope="row">
@@ -109,7 +109,7 @@
             <textarea class="description"></textarea>
           </td>
           <td>
-            <button id="saveBtn">Save</button>
+            <button class="saveBtn">Save</button>
           </td>
         </tr>
         <tr scope="row">
@@ -118,7 +118,7 @@
             <textarea class="description"></textarea>
           </td>
           <td>
-            <button id="saveBtn">Save</button>
+            <button class="saveBtn">Save</button>
           </td>
         </tr>
         <tr scope="row">
@@ -127,7 +127,7 @@
             <textarea class="description"></textarea>
           </td>
           <td>
-            <button id="saveBtn">Save</button>
+            <button class="saveBtn">Save</button>
           </td>
         </tr>
         <tr scope="row">
@@ -136,7 +136,7 @@
             <textarea class="description"></textarea>
           </td>
           <td>
-            <button id="saveBtn">Save</button>
+            <button class="saveBtn">Save</button>
           </td>
         </tr>
         <tr scope="row">
@@ -145,7 +145,7 @@
             <textarea class="description"></textarea>
           </td>
           <td>
-            <button id="saveBtn">Save</button>
+            <button class="saveBtn">Save</button>
           </td>
         </tr>
       </table>
@@ -155,28 +155,22 @@
   
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="schedule.js" type="text.javascript"></script>
     <script>
       $(document).ready(function() {
       
       var today = moment();
       $("#currentDay").text(today.format("dddd, MMMM Do YYYY"));
 
-// Saving text to local storage
-      // var saveEl = $("#saveBtn");
-      // var taskInput = $(".description");
+      var taskInput = $(".description");
 
-      // //1. Enter text
-      // function saveTask () {
-      //   saveEl.click(function(){
+      taskInput.click(function(){
+        $(".saveBtn").click(function() {
 
-      //   })
-      // }
-      //2. Click save & don't refresh page
-      //3. Save to local storage
-    
+        localStorage.setItem("taskInput", JSON.stringify(taskInput));
+        });
+      });
 
-    });
+      });
    
     </script>
   </body>
