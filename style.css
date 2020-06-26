@@ -58,7 +58,7 @@ textarea{
   color: white;
 }
 
-#saveBtn {
+.saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -70,7 +70,7 @@ textarea{
   margin: 0;
 }
 
-#saveBtn i:hover {
+.saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
@@ -89,7 +89,4 @@ textarea{
   text-align: center;
 } */
 
-button {
-  background-color: #06AED5;
-}
 
